@@ -21,7 +21,7 @@ class LoginController extends Controller
             'password' => $request['password']
         ];
       #  dd(bcrypt($mang['password']));
-        $is_true=Auth::attempt($mang); 
+        $is_true=Auth::attempt($mang);
         if($is_true == true){
 
             return redirect()->route('admin');
